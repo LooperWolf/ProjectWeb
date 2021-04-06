@@ -11,19 +11,21 @@ import {
   Redirect,
   Switch,
   Route,
+  useHistory,
+  Link
 } from "react-router-dom";
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      isUserAuthenticated: true
-    };
   }
+ 
   render() {
     return (
       <Router>
-        <header className="Main-header">
+        <header className="Main-header" >
+          <Link to="/"> 
           <img src={logo} className="Main-logo" alt="logo" />
+          </Link>
         </header>
         <Switch>
           <Route
@@ -31,8 +33,6 @@ class App extends Component {
             path="/"
             render={() => {
               return (
-                this.state.isUserAuthenticated ?
-                  <Redirect to="/home" /> :
                   <Redirect to="/login" />
               )
             }}
@@ -44,7 +44,9 @@ class App extends Component {
           <Route component={Default} path="/Default" exact />
         </Switch>
         <footer className="Main-footer">
+        <Link to="/creds"> 
           <img src={logo} className="Main-logo" alt="logo" style={{justifyContent:'right'}} />
+          </Link>
         </footer>
       </Router>
     );

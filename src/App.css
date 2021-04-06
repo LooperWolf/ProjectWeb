@@ -20,6 +20,36 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.Death-Box {
+  width: 100px;
+  height: 100px;
+  /* background-color: red; */
+  position: relative;
+  animation-name: loop;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.disco {
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes loop {
+  0%   { left:-150px; top:0px;}
+  25%  { left:99%; top:0px;}
+  50%  {left:99%; top: 300px;;}
+  75%  { left:-150px; top:300px;}
+  100% { left:-150px; top:0px;}
+}
+@keyframes example {
+  0%   {background-color: red;}
+  25%  {background-color: black;}
+  50%  {background-color: red;}
+  100% {background-color: black;}
+}
+
+
 
 .App-header {
   background-color: #282c34;

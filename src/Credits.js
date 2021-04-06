@@ -29,11 +29,19 @@ class Credits extends Component {
     render() {
         return (
 
-            <div className="App">
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                </header>
-                <div style={{ backgroundColor: '#282c34', height: '100vh' }}>
+            <div className="App" style={{height:'100vh'}}>
+                <img src={logo} className="App-logo" alt="logo" />
+                <div style={{ backgroundColor: '#282c34', color:'white'  }}>
+                    By
+                </div>
+                <div style={{ backgroundColor: '#282c34',  color:'white',marginBottom:20}}>
+                    Akkaphon Something 6180074
+                </div>
+                <div style={{ backgroundColor: '#282c34', color:'white',marginBottom:20 }}>
+                    Demitra Something 6180725
+                </div>
+                <div style={{ backgroundColor: '#282c34', color:'white',marginBottom:20 }}>
+                    Kittipoom Something 6180163
                 </div>
             </div>
         );
